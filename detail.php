@@ -4,5 +4,9 @@ include 'function/UserImplements.php';
 
 if(@$_GET){
     $UI = new UserImplements();
-    echo json_encode($UI->userProfile());
+    try {
+        echo json_encode($UI->getUserDetail(@$_GET['id']));
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
 }
