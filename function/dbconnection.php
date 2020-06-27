@@ -1,12 +1,12 @@
 <?php
 class Database{
-    private $host = '127.0.0.1';
-    private $username = 'root';
-    private $password = '';
+    private $host = 'localhost';
+    private $username = 'newuser';
+    private $password = 'hallo';
     private $db = 'phpoop';
     
     function __construct(){
-        $koneksi = mysqli_connect($this->host, $this->uname, $this->pass,$this->db);
+        $koneksi = mysqli_connect($this->host, $this->username, $this->password,$this->db);
 		
  
 		if($koneksi){
